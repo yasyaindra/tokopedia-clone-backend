@@ -105,3 +105,15 @@ button {
 .notification-item-new {
     background-color: #ebffef;
 }
+
+/* Homepage */
+.card.product-item {
+    overflow: hidden;
+}
+
+.card.product-item img {
+    transition: transform 0.2s;
+}
+.card.product-item img:hover {
+    transform: scale(1.2);
+}

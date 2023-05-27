@@ -418,26 +418,28 @@
   
       <!-- Start All Products -->
       <div class="shadow">
-        <div class="container mt-5">
+        <div class="container mt-5 product-section">
           <h5 class="mb-3 fw-bold">Cari Produk Lainnya!</h5>
           <div class="row">
             <div class="col-lg-2 mb-2">
-              <div class="card">
-                <img src="/img/product.avif" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <span style="color: orange; font-size: 12px" class="fw-bold"
-                    >Product Terbaru!</span
-                  >
-                  <p class="fw-light">T Shirt Band</p>
-                  <p class="fw-bold">Rp. 150.000</p>
-                  <span class="fw-light" style="font-size: 13px"
-                    >Clothing Store</span
-                  >
-                  <p class="fw-light" style="font-size: 12px">
-                    ⭐ 4.3 | Terjual 14rb
-                  </p>
+              <a href="/toko/produk" class="text-decoration-none">
+                <div class="card product-item">
+                  <img src="/img/product.avif" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <span style="color: orange; font-size: 12px" class="fw-bold"
+                      >Product Terbaru!</span
+                    >
+                    <p class="fw-light" style="margin-bottom:0">T Shirt Band</p>
+                    <p class="fw-bold" style="margin-bottom:0">Rp. 150.000</p>
+                    <span class="fw-light" style="font-size: 13px"
+                      >Clothing Store</span
+                    >
+                    <p class="fw-light" style="font-size: 12px">
+                      ⭐ 4.3 | Terjual 14rb
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-lg-2 mb-2">
               <div class="card">
