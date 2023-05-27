@@ -337,23 +337,25 @@
         <h5 class="mb-3 fw-bold">Kejar Diskonan Special</h5>
         <div class="row justify-content-between">
           <div class="col-lg-3 col-sm-5 mb-3">
-            <div class="card">
-              <img src="/img/product.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Rp. 99.000, 00</h5>
-                <div class="row justify-content-start align-items-baseline">
-                  <div class="col-lg-3">
-                    <span class="badge rounded-pill text-bg-danger">92%</span>
+            <a href="/" class="text-decoration-none">
+              <div class="card product-item">
+                <img src="/img/product.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Rp. 99.000, 00</h5>
+                  <div class="row justify-content-start align-items-baseline">
+                    <div class="col-lg-3">
+                      <span class="badge rounded-pill text-bg-danger">92%</span>
+                    </div>
+                    <div class="col-lg">
+                      <p class="text-decoration-line-through text-secondary">
+                        Rp. 150.000, 00
+                      </p>
+                    </div>
                   </div>
-                  <div class="col-lg">
-                    <p class="text-decoration-line-through text-secondary">
-                      Rp. 150.000, 00
-                    </p>
-                  </div>
+                  <p class="card-text fw-bold">Segera Habis</p>
                 </div>
-                <p class="card-text fw-bold">Segera Habis</p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-lg-3 col-sm-5 mb-3">
             <div class="card">
@@ -418,11 +420,11 @@
   
       <!-- Start All Products -->
       <div class="shadow">
-        <div class="container mt-5 product-section">
+        <div class="container mt-5">
           <h5 class="mb-3 fw-bold">Cari Produk Lainnya!</h5>
           <div class="row">
             <div class="col-lg-2 mb-2">
-              <a href="/toko/produk" class="text-decoration-none">
+              <a href="{{route('product')}}" class="text-decoration-none">
                 <div class="card product-item">
                   <img src="/img/product.avif" class="card-img-top" alt="..." />
                   <div class="card-body">

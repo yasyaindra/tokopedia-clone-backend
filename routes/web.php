@@ -28,3 +28,23 @@ Route::get('/register', function () {
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/toko/produk', function () {
+    return view('products.single');
+})->name('product');
+
+Route::get('/toko', function () {
+    return view('store.single');
+})->name('store');
+
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
+Route::get('/notif', function () {
+    return view('notification');
+})->name('notification');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');

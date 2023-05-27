@@ -109,6 +109,7 @@ button {
 /* Homepage */
 .card.product-item {
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card.product-item img {
