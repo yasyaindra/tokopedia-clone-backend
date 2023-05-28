@@ -41,16 +41,29 @@
                       <span class="text-secondary">Pengaturan</span>
                     </div>
                   </div>
-                  <div class="mt-4">
-                    @auth
-                    <a class="btn btn-danger" href="{{ route('logout') }}">Logout</a>
-                    @endauth
+                  <div class="row d-flex flex-column mt-3">
+                    <div class="col-lg">
+                      @auth
+                      <a class="btn btn-primary" href="{{ route('password') }}">Change Password</a>
+                      @endauth
+                    </div>
+                    <div class="col-lg-3 mt-3">
+                      @auth
+                      <a class="btn btn-danger" href="{{ route('logout') }}">Logout</a>
+                      @endauth
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg">
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              {{ session('success') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="card">
               <div class="card-body">
                 <nav>

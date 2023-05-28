@@ -21,7 +21,7 @@
             <a
               class="nav-link active d-none d-lg-block"
               aria-current="page"
-              href="#"
+              href="{{route('home')}}"
               >Tokopedia Clone</a
             >
           </li>

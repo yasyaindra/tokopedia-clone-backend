@@ -26,15 +26,19 @@ Route::get('/', function () {
 //     return view('auth.register');
 // })->name('register');
 
-Route::get('/login', [AuthController::class,'login'])->name('login');
+Route::get('/login', [AuthController::class,'login'])->name('login')->middleware('guest');
 
-Route::get('/register', [AuthController::class,'register'])->name('register');
+Route::get('/register', [AuthController::class,'register'])->name('register')->middleware('guest');
 
-Route::post('/login', [AuthController::class,'login_action'])->name('login.post');
+Route::post('/login', [AuthController::class,'login_action'])->name('login.post')->middleware('guest');
 
-Route::post('/register', [AuthController::class,'register_action'])->name('register.post');
+Route::post('/register', [AuthController::class,'register_action'])->name('register.post')->middleware('guest');
 
-Route::get('/logout', [AuthController::class,'logout'])->name('logout');
+Route::get('/logout', [AuthController::class,'logout'])->name('logout')->middleware('auth');
+
+Route::get('/change-password', [AuthController::class,'password'])->name('password')->middleware('auth');
+
+Route::post('/change-password', [AuthController::class,'password_action'])->name('password.post')->middleware('auth');
 
 
 
@@ -60,4 +64,4 @@ Route::get('/notif', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-})->name('profile');
+})->name('profile')->middleware('auth');

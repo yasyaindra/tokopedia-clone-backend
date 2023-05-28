@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
     <h4 class="fw-bold">Notifikasi</h4>
-    <div class="card col-md-6">
+    <div class="card col-md-8">
       <div class="card-body">
         <a href="" class="text-decoration-none">Tandai Semua Dibaca</a>
         <div class="card notification-item-new mt-3">

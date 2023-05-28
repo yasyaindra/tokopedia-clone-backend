@@ -58,7 +58,7 @@ class AuthController extends Controller
 
     public function password()
     {
-        return view('user/password', ['data' => 'Change Password']);
+        return view('password', ['title' => 'Change Password']);
     }
 
     public function password_action(Request $request)
@@ -71,7 +71,7 @@ class AuthController extends Controller
         $user->password = Hash::make($request->new_password);
         $user->save();
         $request->session()->regenerate();
-        return back()->with('success', 'Password changed!');
+        return redirect()->route('profile')->with('success', 'Password successfully changed');
     }
 
     public function logout(Request $request)
