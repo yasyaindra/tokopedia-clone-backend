@@ -116,5 +116,5 @@ button {
     transition: transform 0.2s;
 }
 .card.product-item img:hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
 }

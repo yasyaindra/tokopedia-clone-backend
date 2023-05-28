@@ -32,18 +32,27 @@
                 </div>
               </div>
               <div class="row">
-                <form>
+                <form method="POST" action="{{route('login.post')}}">
+                  @if (session('success'))
+                      <p class="alert alert-success">{{ session('success')  }}</p>
+                  @endif
+                  @if ($errors->any())
+                    @foreach ($errors->all() as $err)
+                        <p class="alert alert-danger">{{ $err }}</p>
+                    @endforeach
+                  @endif
+                  @csrf
                   <div class="mb-3">
                     <label class="form-label fw-bold text-secondary"
-                      >Nomor Hape atau Email</label
+                      >Email</label
                     >
-                    <input type="email" class="form-control" />
+                    <input type="email" class="form-control" name="email" />
                   </div>
                   <div class="mb-3">
                     <label class="form-label fw-bold text-secondary"
                       >Password</label
                     >
-                    <input type="password" class="form-control mb-3" />
+                    <input type="password" class="form-control mb-3" name="password" />
                     <a
                       class="form-check-label"
                       href=""

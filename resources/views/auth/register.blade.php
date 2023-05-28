@@ -32,24 +32,42 @@
                 </div>
               </div>
               <div class="row">
-                <form>
-                  <div class="mb-3">
-                    <label class="form-label fw-bold text-secondary"
-                      >Email</label
-                    >
-                    <input type="email" class="form-control" />
-                  </div>
+                @if ($errors->any())
+                    @foreach ($errors->all() as $err)
+                        <p class="alert alert-danger">{{ $err }}</p>
+                    @endforeach
+                @endif
+                <form method="POST" action="{{route('register.post')}}">
+                  @csrf
                   <div class="mb-3">
                     <label class="form-label fw-bold text-secondary"
                       >Nama Lengkap</label
                     >
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-secondary"
+                      >Username</label
+                    >
+                    <input type="text" class="form-control" name="username" value="{{ old('username') }}" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-secondary"
+                      >Email</label
+                    >
+                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" />
                   </div>
                   <div class="mb-3">
                     <label class="form-label fw-bold text-secondary"
                       >Password</label
                     >
-                    <input type="password" class="form-control mb-3" />
+                    <input type="password" class="form-control mb-3" name="password" />
+                  </div>
+                  <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary"
+                        >Password Confirm</label
+                      >
+                      <input type="password" class="form-control" id="password" name="password_confirm">
                   </div>
                   <button type="submit" class="btn btn-success">Daftar</button>
                 </form>

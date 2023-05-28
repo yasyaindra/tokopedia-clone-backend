@@ -44,6 +44,15 @@
               Cart</a
             >
           </li>
+          @guest
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="{{route('login')}}">
+              <i class="fa-solid fa-user"></i>
+              Login</a
+            >
+          </li>      
+          @endguest
+          @auth
           <li class="nav-item">
             <a class="nav-link mx-2" href="{{route('notification')}}">
               <i class="fa-solid fa-bell"></i>
@@ -55,7 +64,8 @@
               <i class="fa-solid fa-user"></i>
               Profile</a
             >
-          </li>
+          </li>          
+          @endauth
         </ul>
       </div>
     </div>

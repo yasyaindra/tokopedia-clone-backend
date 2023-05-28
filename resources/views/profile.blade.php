@@ -41,6 +41,11 @@
                       <span class="text-secondary">Pengaturan</span>
                     </div>
                   </div>
+                  <div class="mt-4">
+                    @auth
+                    <a class="btn btn-danger" href="{{ route('logout') }}">Logout</a>
+                    @endauth
+                  </div>
                 </div>
               </div>
             </div>
@@ -72,7 +77,7 @@
                       aria-controls="nav-toko"
                       aria-selected="true"
                     >
-                      Biodata Diri
+                      Detail Toko
                     </button>
                     <button
                       class="nav-link fw-bold"
@@ -110,7 +115,7 @@
                   >
                     <div class="container mt-4">
                       <div class="row">
-                        <div class="col-lg-3 text-center">
+                        <div class="col-lg-3 d-flex flex-column text-center">
                           <img
                             src="/img/default.jpg"
                             alt=""
@@ -278,7 +283,7 @@
                   >
                     <div class="container mt-4">
                       <div class="row">
-                        <div class="col-lg-3 text-center">
+                        <div class="col-lg-3 d-flex flex-column text-center">
                           <img
                             src="/img/default.jpg"
                             alt=""
